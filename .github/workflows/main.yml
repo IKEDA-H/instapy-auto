@@ -3,9 +3,9 @@ name: GitHub-Instapy-Auto
 
 # 発火タイミング
 on:
-  push:
-  
-
+  schedule:
+    - cron: '0 13 * * *'
+    
 jobs:
   build:
     # windowsの最新版環境内で処理
