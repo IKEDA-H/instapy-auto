@@ -60,7 +60,7 @@ with smart_run(session):
     #session.set_relationship_bounds(min_posts=10, max_posts=1000)
 
     #17_いいね！やフォローなどの詳細時間設定
-    session.set_action_delays(enabled=True, like=2, comment=2, follow=2, unfollow=28, story=5, randomize=True, random_range_from=70, random_range_to=200, safety_match=True)
+    session.set_action_delays(enabled=True, like=2, comment=2, follow=2, unfollow=28, story=5, randomize=True, random_range_from=50, random_range_to=100, safety_match=True)
 
 
     ##ここまでが前設定
@@ -71,4 +71,4 @@ with smart_run(session):
 
     #1_いいね！を行うアクション
     session.set_user_interact(amount=1, randomize=True, percentage=8, media='Photo')
-    session.like_by_tags(tags=['ポメラニアン','pomeranian'], use_random_tags=True, amount=10, skip_top_posts=True, randomize=False, media=None, interact=True)
+    session.like_by_tags(tags=['ポメラニアン','pomeranian'], use_random_tags=True, amount=5, skip_top_posts=True, randomize=False, media=None, interact=True)
