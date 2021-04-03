@@ -5,7 +5,7 @@ name: GitHub-Instapy-Auto
 on:
   schedule:
     - cron: '0 18 * * *'
-    - cron: '0 19 * * *'
+    - cron: '30 19 * * *'
     
 jobs:
   build:
