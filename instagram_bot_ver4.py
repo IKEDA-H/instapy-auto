@@ -19,7 +19,7 @@ with smart_run(session):
     #session.set_do_follow(enabled=True, percentage=8, times=1)
 
     #4_各種アクションの1時間/1日当たり限度設定
-    session.set_quota_supervisor(enabled=True, sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"], sleepyhead=True, stochastic_flow=True, notify_me=True,
+    session.set_quota_supervisor(enabled=False, sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"], sleepyhead=True, stochastic_flow=True, notify_me=True,
                               peak_likes_hourly=40, peak_likes_daily=100, peak_comments_hourly=None, peak_comments_daily=None,
                                 peak_follows_hourly=None, peak_follows_daily=None, peak_unfollows_hourly=None, peak_unfollows_daily=None, peak_server_calls_hourly=2000, peak_server_calls_daily=4500)
 
