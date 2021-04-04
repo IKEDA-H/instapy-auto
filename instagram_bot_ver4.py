@@ -70,5 +70,5 @@ with smart_run(session):
     ##ここからがアクション設定
 
     #1_いいね！を行うアクション
-    session.set_user_interact(amount=1, randomize=True, percentage=8, media='Photo')
+    #session.set_user_interact(amount=1, randomize=True, percentage=8, media='Photo')
     session.like_by_tags(tags=['ポメラニアン','pomeranian'], use_random_tags=True, amount=5, skip_top_posts=True, randomize=False, media=None, interact=True)
