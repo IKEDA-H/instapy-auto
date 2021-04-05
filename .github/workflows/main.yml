@@ -4,7 +4,7 @@ name: GitHub-Instapy-Auto
 # 発火タイミング
 on:
   schedule:
-    - cron: '30 19 * * *'
+    - cron: '0 19,23 * * *'
     
 jobs:
   build:
