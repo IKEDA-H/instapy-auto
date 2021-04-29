@@ -2,7 +2,7 @@ from instapy import InstaPy
 from instapy import smart_run
 
 
-session = InstaPy(username = "pomeranianroom", password = "pomeranian1022", headless_browser=False)
+session = InstaPy(username = "pomeranianroom", password = "pom1022", headless_browser=False)
 
 with smart_run(session):
 
@@ -20,7 +20,7 @@ with smart_run(session):
 
     #4_各種アクションの1時間/1日当たり限度設定
     session.set_quota_supervisor(enabled=False, sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"], sleepyhead=True, stochastic_flow=True, notify_me=True,
-                              peak_likes_hourly=40, peak_likes_daily=100, peak_comments_hourly=None, peak_comments_daily=None,
+                              peak_likes_hourly=60, peak_likes_daily=100, peak_comments_hourly=None, peak_comments_daily=None,
                                 peak_follows_hourly=None, peak_follows_daily=None, peak_unfollows_hourly=None, peak_unfollows_daily=None, peak_server_calls_hourly=2000, peak_server_calls_daily=4500)
 
     #5_いいね！を行わない制限設定
@@ -60,7 +60,7 @@ with smart_run(session):
     #session.set_relationship_bounds(min_posts=10, max_posts=1000)
 
     #17_いいね！やフォローなどの詳細時間設定
-    session.set_action_delays(enabled=True, like=2, comment=2, follow=2, unfollow=28, story=5, randomize=True, random_range_from=50, random_range_to=100, safety_match=True)
+    session.set_action_delays(enabled=True, like=3, comment=2, follow=2, unfollow=28, story=5, randomize=True, random_range_from=50, random_range_to=300, safety_match=True)
 
 
     ##ここまでが前設定
@@ -71,4 +71,4 @@ with smart_run(session):
 
     #1_いいね！を行うアクション
     #session.set_user_interact(amount=1, randomize=True, percentage=8, media='Photo')
-    session.like_by_tags(tags=['ポメラニアン','pomeranian'], use_random_tags=True, amount=5, skip_top_posts=True, randomize=False, media=None, interact=True)
+    session.like_by_tags(tags=['ポメラニアン','pomeranian'], use_random_tags=True, amount=15, skip_top_posts=True, randomize=False, media=None, interact=True)
