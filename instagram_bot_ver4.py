@@ -2,7 +2,7 @@ from instapy import InstaPy
 from instapy import smart_run
 
 
-session = InstaPy(username = "pomeranianroom", password = "pompom1022", headless_browser=False)
+session = InstaPy(username = "pomeranianroom", password = "pom1022", headless_browser=False)
 
 with smart_run(session):
 
